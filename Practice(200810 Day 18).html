@@ -12,7 +12,6 @@
     <!-- animate -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css" />
 </head>
-
 <style type="text/css">
     * {
         padding: 0;
@@ -20,7 +19,7 @@
         list-style: none;
         box-sizing: border-box;
         line-height: 1.5em;
-        letter-spacing: .1em;
+        letter-spacing: 0.1em;
         font-family: "Lato", "Noto Sans TC", sans-serif;
     }
     
@@ -93,7 +92,7 @@
     i {
         background-color: #3695c4;
         color: white;
-        padding: 5px;
+        padding: 5px 5px 5px 8px;
         border-radius: 5px;
         margin-right: 10px;
         font-size: 24px;
@@ -102,6 +101,7 @@
     @media (max-width: 768px) {
         .intro {
             display: block;
+            padding: 30px 0 20px;
         }
         .intro .pic {
             width: 30%;
@@ -134,6 +134,157 @@
             font-size: 16px;
         }
     }
+    
+    .item-group {
+        padding: 50px 0;
+    }
+    
+    .item {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: relative;
+    }
+    
+    .item::after {
+        content: "";
+        width: 5px;
+        height: 100%;
+        background-color: #3695c4;
+        position: absolute;
+        top: 50px;
+        left: 20.8%;
+        z-index: -2;
+    }
+    
+    .item h2 {
+        padding: 5px 10px;
+        text-align: center;
+        color: #3695c4;
+        border: 5px solid #3695c4;
+        border-radius: 5px;
+        transition: .5s;
+    }
+    
+    .item.active h2,
+    .item.active .icon .fas::after {
+        color: #0a4b83;
+        background-color: #d1e3e8;
+        border: 5px solid #0a4b83;
+    }
+    
+    .item .icon {
+        width: 10%;
+        text-align: center;
+    }
+    
+    .icon .fas {
+        font-size: 36px;
+        border-radius: 50%;
+        padding: 10px;
+        position: relative;
+        transition: .5s;
+    }
+    
+    .item.active .icon .fas {
+        color: #d1e3e8;
+        background-color: #0a4b83;
+    }
+    
+    .icon .fas::after {
+        content: "";
+        width: 120%;
+        height: 120%;
+        border: 5px solid #3695c4;
+        background-color: white;
+        position: absolute;
+        border-radius: 50%;
+        top: -10px;
+        left: -11px;
+        z-index: -1;
+        transition: .5s;
+    }
+    
+    .item .text {
+        width: 70%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-bottom: 50px;
+        border-bottom: 3px solid #d3d3d3;
+    }
+    
+    .item .text-group {
+        width: 70%;
+    }
+    
+    .text-group .text {
+        width: 100%;
+    }
+    
+    .text-group .cancel {
+        border-bottom: 0;
+    }
+    
+    .item:not(:first-child) {
+        padding-top: 50px;
+    }
+    
+    .text h3 {
+        width: 30%;
+        color: #3695c4;
+        transition: .5s;
+    }
+    
+    .item.active .text h3 {
+        color: #0a4b83;
+        text-shadow: 3px 3px 3px #bbb;
+    }
+    
+    .text .describe {
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .describe li {
+        margin-left: 20px;
+        list-style: decimal;
+    }
+    
+    @media (max-width: 768px) {
+        .item-group {
+            padding: 25px 0;
+        }
+        .item {
+            display: block;
+        }
+        .item::after {
+            display: none;
+        }
+        .item h2 {
+            width: 50%;
+            margin: 0 auto;
+        }
+        .item .icon {
+            display: none;
+        }
+        .item .text {
+            width: 90%;
+            margin: 0 auto;
+            display: block;
+            padding-bottom: 25px;
+        }
+        .text h3 {
+            width: 100%;
+            padding: 10px 0;
+        }
+        .item .text-group {
+            width: 90%;
+        }
+        .item:not(:first-child) {
+            padding-top: 25px;
+        }
+    }
 </style>
 
 <body>
@@ -164,10 +315,93 @@
                 </ul>
             </div>
         </div>
+        <div class="item-group">
+            <div class="item">
+                <h2>教育背景</h2>
+                <div class="icon">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+                <div class="text">
+                    <h3>2014.07 - 2016.07</h3>
+                    <h3>國立臺灣師範大學</h3>
+                    <h3>圖文傳播所</h3>
+                    <p class="describe">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, cupiditate similique praesentium culpa tempore ullam ducimus aut aliquam placeat vel nesciunt quae, ipsam nam dicta fuga illo recusandae! Enim, quam.</p>
+                </div>
+            </div>
+            <div class="item">
+                <h2>工作經歷</h2>
+                <div class="icon">
+                    <i class="fas fa-globe-europe"></i>
+                </div>
+                <div class="text-group">
+                    <div class="text cancel">
+                        <h3>2019.09 - Now</h3>
+                        <h3>xx資訊股份有限公司</h3>
+                        <h3>技術支援工程師(TSE)</h3>
+                        <ul class="describe">
+                            <li>產品售後服務(東南歐/俄羅斯/臺灣)</li>
+                            <li>技術問題排除及分析</li>
+                            <li>內外溝通確認需求</li>
+                            <li>經銷商教育訓練</li>
+                        </ul>
+                    </div>
+                    <div class="text">
+                        <h3>2017.10 - 2019.08</h3>
+                        <h3>xx科技股份有限公司</h3>
+                        <h3>業務工程師(FAE)</h3>
+                        <ul class="describe">
+                            <li>產品裝機及客戶教育訓練</li>
+                            <li>客戶需求及功能釐清</li>
+                            <li>功能測試及問題排除</li>
+                            <li>技術文件撰寫</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <h2>技能證書</h2>
+                <div class="icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="text-group">
+                    <div class="text">
+                        <div class="describe">
+                            <p>語言類：TOEIC 835</p>
+                            <p>軟體類：HTML，CSS，JavaScript，JQuery</p>
+                            <p>活動類：經銷商教育訓練，客戶問題指導服務</p>
+                            <p>服務類：台灣，東歐，南歐，俄羅斯售後經銷服務</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <h2>自我評價</h2>
+                <div class="icon">
+                    <i class="fas fa-user-secret"></i>
+                </div>
+                <div class="text-group">
+                    <div class="text">
+                        <div class="describe">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi atque, dicta illo cupiditate consequuntur dolor minima vel maxime optio veritatis animi consectetur eligendi alias aperiam reiciendis est sed neque placeat
+                                ab, itaque dolorem non adipisci similique. Neque totam labore sapiente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="footer"></div>
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.item').click(function() {
+                $(this).toggleClass('active');
+                $(this).siblings().removeClass('active');
+            });
+        });
+    </script>
 </body>
 
 </html>
