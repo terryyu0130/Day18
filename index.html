@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Font-awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    </link>
+    <!-- animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css" />
+</head>
+
+<style type="text/css">
+    * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        box-sizing: border-box;
+        line-height: 1.5em;
+        letter-spacing: .1em;
+        font-family: "Lato", "Noto Sans TC", sans-serif;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    img {
+        width: 100%;
+        vertical-align: middle;
+    }
+    
+    .header,
+    .footer {
+        width: 100%;
+        height: 60px;
+        background-color: #3695c4;
+    }
+    
+    .content {
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+    
+    .intro {
+        display: flex;
+        justify-content: space-between;
+        padding: 60px 0;
+        border-bottom: 3px solid #d3d3d3;
+    }
+    
+    .intro .pic {
+        width: 20%;
+    }
+    
+    .intro .title {
+        width: 60%;
+    }
+    
+    .title .text {
+        color: #3695c4;
+        display: flex;
+        align-items: center;
+    }
+    
+    .text h1 {
+        width: 30%;
+    }
+    
+    .text h2 {
+        width: 70%;
+        text-align: center;
+    }
+    
+    .title .list {
+        display: flex;
+        flex-wrap: wrap;
+        color: #3695c4;
+        font-weight: bold;
+        padding: 10px 0;
+    }
+    
+    .list li {
+        width: 50%;
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+    }
+    
+    i {
+        background-color: #3695c4;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        margin-right: 10px;
+        font-size: 24px;
+    }
+    
+    @media (max-width: 768px) {
+        .intro {
+            display: block;
+        }
+        .intro .pic {
+            width: 30%;
+            margin: 0 auto;
+        }
+        .intro .title {
+            width: 90%;
+            margin: 0 auto;
+        }
+        .title .text {
+            display: block;
+            padding: 10px 0;
+        }
+        .text h1,
+        .text h2 {
+            width: 100%;
+            text-align: center;
+        }
+        .text h2 {
+            padding-top: 20px;
+        }
+        .title .list {
+            display: block;
+        }
+        .list li {
+            width: 70%;
+            margin: 0 auto;
+        }
+        i {
+            font-size: 16px;
+        }
+    }
+</style>
+
+<body>
+    <div class="header"></div>
+    <div class="content">
+        <div class="intro">
+            <div class="pic">
+                <img src="https://randomuser.me/api/portraits/men/10.jpg" alt="">
+            </div>
+            <div class="title">
+                <div class="text">
+                    <h1>Terry Yu</h1>
+                    <h2>求職意向：前端工程</h2>
+                </div>
+                <ul class="list">
+                    <li>
+                        <i class="far fa-calendar-alt"></i> 生日：1992.01.30
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-square-alt"></i> 電話：0911333333
+                    </li>
+                    <li>
+                        <i class="fas fa-address-book"></i> 現居：台北市中山區
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope-square"></i> 信箱：vic666v@gmail.com
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
+
+
+</body>
+
+</html>
